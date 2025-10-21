@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox</title>
+</head>
+
+<body>
+    <h1>THE TITLE OF YOUR WEBPAGE</h1>
+    <button onclick="alert('Hello World')">Click Me</button>
+
+    <button id="btn">YUH</button>
+
+    <div id="container"></div>
+
+    <script>
+        const container = document.querySelector("#container");
+
+        const content = document.createElement("div");
+        const pTag = document.createElement("p");
+        const header3 = document.createElement("h3");
+        const divCont = document.createElement("div");
+        const h1 = document.createElement("h1");
+        const p = document.createElement("p");
+
+        content.classList.add("content");
+        content.textContent = "This is the glorious text-content!";
+
+        pTag.style.color = "red";
+        pTag.textContent = "Hey I'm red!";
+
+        header3.style.color = "blue";
+        header3.textContent = "I'm a blue h3!";
+
+        divCont.style.backgroundColor = "pink";
+        divCont.style.border = "black solid 2px";
+
+        h1.textContent = "I'm in a div";
+        p.textContent = "ME TOO!";
+
+        divCont.appendChild(h1);
+        divCont.appendChild(p);
+
+        container.appendChild(content);
+        container.appendChild(pTag);
+        container.appendChild(header3);
+        container.appendChild(divCont);
+
+        const btn = document.querySelector("#btn");
+
+        btn.addEventListener("dblclick", function (e) {
+            e.target.style.background = "blue";
+        });
+
+    </script>
+</body>
+
+</html>
